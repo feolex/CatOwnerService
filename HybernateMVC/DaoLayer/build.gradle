@@ -1,0 +1,23 @@
+
+group = 'ru.feolex'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('ch.qos.logback:logback-classic:1.3.5')
+    testImplementation('org.slf4j:slf4j-api:2.0.4')
+    testImplementation("com.h2database:h2:2.2.224")
+
+    implementation project(':HybernateMVC:Common')
+
+    implementation('org.postgresql:postgresql:42.7.2')
+    implementation('org.hibernate:hibernate-core:6.4.4.Final')
+
+    implementation('org.springframework:spring-core:6.1.5')
+    implementation('org.springframework:spring-context:6.1.5')
+    // - add implementation platforms - was added transitive from parent build.gradle
+    //spring core + spring context(need to add via platform)
+}
